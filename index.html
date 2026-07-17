@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brixton — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="about">
+  <!--
+    HOW TO ADD A NEW PROJECT TAB:
+    1. Copy any <section> block below. Give it a unique id and data-theme name.
+    2. Add a matching nav link: <a href="#yourid" class="nav-link">Your Project</a>
+    3. In style.css, copy a body[data-theme="..."] block and set its six color
+       variables for the new theme.
+    script.js discovers sections automatically — no JS changes needed.
+  -->
+
+  <header class="nav">
+    <span class="nav-name">Brixton</span>
+    <nav class="nav-links">
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="#race2048" class="nav-link">2048Race</a>
+      <a href="#beary" class="nav-link">Beary the Bear</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ ABOUT ME ============ -->
+    <section id="about" data-theme="about">
+      <div class="section-inner">
+        <div class="profile-card">
+          <div class="profile-banner"></div>
+          <img class="profile-photo" src="assets/profile.jpg"
+               alt="Photo of Brixton (add assets/profile.jpg)">
+          <div class="profile-body">
+            <h1>Brixton</h1>
+            <p class="headline">Student · Builder of games and desk pets
+              <!-- TODO: replace with your real headline --></p>
+            <p class="school">School: TODO — add your school here</p>
+            <p class="bio">
+              TODO — write a short bio. A couple of sentences about who you are,
+              what you like building, and what you're learning right now.
+            </p>
+            <div class="profile-links">
+              <a class="btn btn-primary" href="https://www.linkedin.com/in/TODO">LinkedIn</a>
+              <a class="btn" href="https://github.com/TODO">GitHub</a>
+              <a class="btn" href="mailto:TODO@example.com">Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2048RACE ============ -->
+    <section id="race2048" data-theme="race2048">
+      <div class="section-inner">
+        <div class="showcase">
+          <h2>2048Race</h2>
+          <p class="tagline">Head-to-head multiplayer 2048 — race an opponent to the winning tile.</p>
+          <div class="shot-frame">
+            <img src="assets/2048race-screenshot.png"
+                 alt="2048Race gameplay screenshot (add assets/2048race-screenshot.png)">
+          </div>
+          <p class="desc">
+            TODO — describe 2048Race: real-time matches, matchmaking queue,
+            guest names, and stats tracking.
+          </p>
+          <ul class="tags">
+            <li>TypeScript</li><li>React</li><li>Socket.IO</li>
+            <li>Tailwind CSS</li><li>SQLite</li>
+          </ul>
+          <a class="btn btn-primary" href="https://TODO-2048race-url.example">Play it</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEARY THE BEAR ============ -->
+    <section id="beary" data-theme="beary">
+      <div class="section-inner">
+        <div class="showcase">
+          <h2>Beary the Bear</h2>
+          <p class="tagline">A desktop pet in the spirit of the early-2000s desk buddies.</p>
+          <div class="beary-stage">
+            <div class="beary-sprite" role="img" aria-label="Beary idle animation"></div>
+          </div>
+          <p class="desc">
+            TODO — describe Beary: he lives on your desktop, wanders your taskbar,
+            naps, dances, and reacts when you drag him around.
+          </p>
+          <ul class="tags">
+            <li>C#</li><li>.NET 8</li><li>WPF</li><li>Sprite animation</li>
+          </ul>
+          <a class="btn btn-primary" href="https://github.com/TODO/deskPet">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Brixton</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
