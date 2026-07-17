@@ -36,15 +36,16 @@ Opens by double-clicking `index.html`; deployable to GitHub Pages as-is.
 
 | Section | Feel | Colors |
 |---|---|---|
-| About Me | Professional, clean | White/light-gray background (`#f7f8fa`), dark slate text (`#1e293b`), navy accent (`#1d4ed8`) |
+| About Me | LinkedIn-style professional | LinkedIn's warm gray page background (`#f4f2ee`), white cards, near-black text (`#191919`), LinkedIn blue accent (`#0a66c2`) for links/buttons |
 | 2048Race | Dark, neon blue/purple (matches the game's Tailwind theme) | Background `#0b0e14`, panel `#12161f`, purple accent `#7c5cff`, cyan accent `#5cc8ff`, hot pink highlight `#ff5c7c` |
 | Beary the Bear | Warm, cozy, matches the sprite | Beary's body brown `#966c46`, muzzle tan `#c4a484` (background), dark brown `#281c12` (text/outline), cream backdrop |
 
 ## Section Content
 
-1. **About Me — Brixton**: profile photo spot, short bio, school — plus link buttons
-   for LinkedIn, GitHub, and email. All personal details are clearly marked
-   `TODO` placeholders for Brixton to fill in.
+1. **About Me — Brixton**: styled like a LinkedIn profile — a white card with a blue
+   banner, circular profile photo overlapping the banner edge, name/headline/school
+   lines, and pill buttons for LinkedIn, GitHub, and email. All personal details are
+   clearly marked `TODO` placeholders for Brixton to fill in.
 2. **2048Race**: title, description placeholder, screenshot spot, tech tags
    (TypeScript, Socket.IO, Tailwind, SQLite), "Play it" link button (placeholder URL).
 3. **Beary the Bear**: same showcase layout; described as a desktop pet in the spirit
