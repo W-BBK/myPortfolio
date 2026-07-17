@@ -79,14 +79,29 @@ img { max-width: 100%; display: block; }
 
 /* ============ Sections ============ */
 section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: 3.5rem 1.5rem 2.5rem;
 }
 
-.section-inner { width: 100%; max-width: 720px; }
+.section-inner { max-width: 720px; margin: 0 auto; }
+
+/* ============ Scroll hint (About section) ============ */
+.scroll-hint {
+  display: block;
+  text-align: center;
+  margin-top: 1.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  animation: hint-bounce 1.6s ease-in-out infinite;
+  transition: color 0.3s ease;
+}
+
+.scroll-hint:hover { color: var(--accent); }
+
+@keyframes hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
 
 /* ============ About Me: LinkedIn-style profile card ============ */
 .profile-card {
@@ -197,7 +212,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 200px;
+  height: 170px;
   margin-bottom: 1.5rem;
 }
 
@@ -228,6 +243,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .beary-sprite { animation: none; }
+  .scroll-hint { animation: none; }
 }
 
 /* ============ Small screens ============ */

@@ -2,12 +2,10 @@
 
 Single-page portfolio. No build step — open `index.html` in a browser.
 
-## Filling in your info
+## Remaining to add
 
-Search the project for `TODO`:
-- `index.html` — bio, school, headline, LinkedIn/GitHub/email URLs, project links
-- `assets/profile.jpg` — add your photo (square works best)
-- `assets/2048race-screenshot.png` — add a gameplay screenshot
+- `assets/profile.jpg` — profile photo (square works best)
+- `assets/2048race-screenshot.png` — gameplay screenshot
 
 ## Adding a new project section
 
