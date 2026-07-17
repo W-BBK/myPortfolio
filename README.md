@@ -2,11 +2,6 @@
 
 Single-page portfolio. No build step — open `index.html` in a browser.
 
-## Remaining to add
-
-- `assets/profile.jpg` — profile photo (square works best)
-- `assets/2048race-screenshot.png` — gameplay screenshot
-
 ## Adding a new project section
 
 1. In `index.html`, copy any `<section>` block; give it a new `id` and `data-theme`.
