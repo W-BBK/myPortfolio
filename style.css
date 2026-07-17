@@ -1,0 +1,239 @@
+/* ============================================================
+   THEMES — to add a project, copy one block, rename the theme,
+   set the six variables. Everything else re-colors itself.
+   ============================================================ */
+body[data-theme="about"] {      /* LinkedIn-profile look */
+  --bg: #f4f2ee;
+  --surface: #ffffff;
+  --text: #191919;
+  --muted: #666666;
+  --accent: #0a66c2;
+  --accent-2: #004182;
+}
+body[data-theme="race2048"] {   /* 2048Race's neon blue/purple */
+  --bg: #0b0e14;
+  --surface: #12161f;
+  --text: #e2e8f0;
+  --muted: #8b93a7;
+  --accent: #7c5cff;
+  --accent-2: #5cc8ff;
+}
+body[data-theme="beary"] {      /* Beary's actual sprite palette */
+  --bg: #f3e2c8;
+  --surface: #c4a484;
+  --text: #281c12;
+  --muted: #5e4a33;
+  --accent: #966c46;
+  --accent-2: #281c12;
+}
+
+/* ============ Base ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+img { max-width: 100%; display: block; }
+
+/* ============ Sticky nav ============ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--surface);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
+  transition: background-color 0.6s ease;
+}
+
+.nav-name { font-weight: 700; font-size: 1.1rem; color: var(--accent); transition: color 0.6s ease; }
+
+.nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; }
+
+.nav-link {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover { color: var(--accent); }
+
+.nav-link.active {
+  color: var(--accent);
+  background-color: var(--bg);
+  font-weight: 600;
+}
+
+/* ============ Sections ============ */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.section-inner { width: 100%; max-width: 720px; }
+
+/* ============ About Me: LinkedIn-style profile card ============ */
+.profile-card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.6s ease;
+}
+
+.profile-banner {
+  height: 130px;
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+}
+
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid var(--surface);
+  object-fit: cover;
+  background-color: var(--bg);
+  margin: -65px 0 0 2rem;
+  transition: border-color 0.6s ease, background-color 0.6s ease;
+}
+
+.profile-body { padding: 1rem 2rem 2rem; }
+
+.profile-body h1 { font-size: 1.9rem; margin-bottom: 0.2rem; }
+
+.headline { color: var(--text); margin-bottom: 0.35rem; }
+
+.school { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; transition: color 0.6s ease; }
+
+.bio { line-height: 1.6; margin-bottom: 1.5rem; }
+
+.profile-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+/* ============ Buttons (shared) ============ */
+.btn {
+  display: inline-block;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  transition: color 0.3s ease, border-color 0.6s ease, background-color 0.3s ease;
+}
+
+.btn:hover { background-color: var(--accent); color: var(--surface); }
+
+.btn-primary { background-color: var(--accent); color: var(--surface); }
+
+.btn-primary:hover { filter: brightness(1.15); }
+
+/* ============ Project showcases (shared) ============ */
+.showcase { text-align: center; }
+
+.showcase h2 {
+  font-size: 2.4rem;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+  transition: color 0.6s ease;
+}
+
+.tagline { color: var(--muted); margin-bottom: 1.5rem; transition: color 0.6s ease; }
+
+.shot-frame {
+  aspect-ratio: 16 / 9;
+  border: 2px dashed var(--muted);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background-color: var(--surface);
+  transition: background-color 0.6s ease, border-color 0.6s ease;
+}
+
+.shot-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+.desc { line-height: 1.6; margin-bottom: 1.25rem; text-align: left; }
+
+.tags {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.tags li {
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: var(--surface);
+  color: var(--accent-2);
+  border: 1px solid var(--muted);
+  transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
+}
+
+/* ============ Beary sprite (real 64×64 frames, 4-frame idle loop) ============ */
+.beary-stage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+  margin-bottom: 1.5rem;
+}
+
+.beary-sprite {
+  width: 64px;
+  height: 64px;
+  background: url("assets/beary-idle.png") 0 0 no-repeat;
+  image-rendering: pixelated;
+  transform: scale(2.5);
+  transform-origin: bottom center;
+  animation: beary-idle 1s steps(4) infinite;
+}
+
+@keyframes beary-idle {
+  to { background-position: -256px 0; }
+}
+
+/* ============ Footer ============ */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  transition: color 0.6s ease;
+}
+
+/* ============ Reduced motion ============ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .beary-sprite { animation: none; }
+}
+
+/* ============ Small screens ============ */
+@media (max-width: 540px) {
+  .nav { flex-direction: column; padding: 0.6rem 1rem; }
+  .profile-photo { margin-left: 1rem; }
+  .profile-body { padding: 1rem 1.25rem 1.5rem; }
+  .showcase h2 { font-size: 1.9rem; }
+}
