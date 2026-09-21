@@ -22,6 +22,7 @@
       <a href="#about" class="nav-link">About Me</a>
       <a href="#race2048" class="nav-link">2048Race</a>
       <a href="#beary" class="nav-link">Beary the Bear</a>
+      <a href="#mcdonalds" class="nav-link">Get Off Your Phone</a>
     </nav>
   </header>
 
@@ -100,6 +101,44 @@
             from (Brown, Polar, and Panda).
           </p>
           <a class="btn btn-primary" href="https://github.com/W-BBK/beary">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GET OFF YOUR PHONE ============ -->
+    <section id="mcdonalds" data-theme="mcdonalds">
+      <div class="section-inner">
+        <div class="showcase">
+          <h2>Get Off Your Phone</h2>
+          <p class="tagline">A webcam classifier that sends you to the McDonald's careers page when it catches you on your phone.</p>
+          <div class="classify-panel" role="img"
+               aria-label="Classifier readout: using phone at 97 percent confidence, above the 90 percent trigger">
+            <div class="classify-head">webcam frame &middot; 224 &times; 224</div>
+            <ul class="classify-rows">
+              <li><span class="cls">working</span><span class="bar"><i style="--w: 1%"></i></span><span class="pct">1%</span></li>
+              <li><span class="cls">calculator</span><span class="bar"><i style="--w: 2%"></i></span><span class="pct">2%</span></li>
+              <li class="hit"><span class="cls">using phone</span><span class="bar"><i style="--w: 97%"></i></span><span class="pct">97%</span></li>
+              <li><span class="cls">reading book</span><span class="bar"><i style="--w: 0%"></i></span><span class="pct">0%</span></li>
+            </ul>
+            <div class="classify-fire">over 90% &rarr; opening jobs.mchire.com</div>
+          </div>
+          <p class="desc">
+            You have seen the reel: someone points a camera at their desk, and the
+            second they reach for their phone, their laptop opens the McDonald's
+            careers page. Study, or start your shift. This is that, actually built.
+            The joke runs on a real convolutional neural network.
+          </p>
+          <p class="desc">
+            A Teachable Machine image model, exported to Keras and run live against
+            a webcam. Every frame is resized to 224 by 224, normalized, and sorted
+            into one of ten desk activities. Nine of those classes exist only so the
+            model can tell a phone from a calculator or an empty desk, which is
+            harder than it sounds for a small network. When it is more than 90%
+            sure you are on your phone, your browser opens McDonald's real hiring
+            portal, with a 10 second cooldown so it only ruins your day once every
+            ten seconds instead of sixty times a minute.
+          </p>
+          <a class="btn btn-primary" href="https://github.com/W-BBK/teachable-machine-mcdonalds">View on GitHub</a>
         </div>
       </div>
     </section>
